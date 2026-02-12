@@ -1,0 +1,134 @@
+{
+  "version": "ihc-marker-dict-v1",
+  "locale": "en-IN",
+  "markers": [
+    {
+      "marker_canonical": "CK7",
+      "display_name": "CK7",
+      "aliases": ["CK7", "CK 7", "Cytokeratin 7"],
+      "hard_pattern_enforce": false,
+      "allowed_patterns": ["cytoplasmic", "membranous"],
+      "requirements": {"percent_required": false, "intensity_required": false, "pattern_required": false}
+    },
+    {
+      "marker_canonical": "CK20",
+      "display_name": "CK20",
+      "aliases": ["CK20", "CK 20", "Cytokeratin 20"],
+      "hard_pattern_enforce": false,
+      "allowed_patterns": ["cytoplasmic", "membranous"],
+      "requirements": {"percent_required": false, "intensity_required": false, "pattern_required": false}
+    },
+    {
+      "marker_canonical": "PAN_CK",
+      "display_name": "Pan CK",
+      "aliases": ["PAN CK", "Pan CK", "Pancytokeratin", "AE1/AE3", "AE1 AE3"],
+      "hard_pattern_enforce": false,
+      "allowed_patterns": ["cytoplasmic", "membranous"],
+      "requirements": {"percent_required": false, "intensity_required": false, "pattern_required": false}
+    },
+    {
+      "marker_canonical": "EMA",
+      "display_name": "EMA",
+      "aliases": ["EMA", "Epithelial membrane antigen"],
+      "hard_pattern_enforce": false,
+      "allowed_patterns": ["membranous", "cytoplasmic"],
+      "requirements": {"percent_required": false, "intensity_required": false, "pattern_required": false}
+    },
+    {
+      "marker_canonical": "TTF1",
+      "display_name": "TTF-1",
+      "aliases": ["TTF1", "TTF-1", "TTF 1", "TTF one", "Thyroid transcription factor 1"],
+      "hard_pattern_enforce": true,
+      "allowed_patterns": ["nuclear"],
+      "requirements": {"percent_required": false, "intensity_required": false, "pattern_required": true}
+    },
+    {
+      "marker_canonical": "NAPSIN_A",
+      "display_name": "Napsin A",
+      "aliases": ["NAPSIN A", "Napsin A", "Napsin"],
+      "hard_pattern_enforce": false,
+      "allowed_patterns": ["cytoplasmic"],
+      "requirements": {"percent_required": false, "intensity_required": false, "pattern_required": false}
+    },
+    {
+      "marker_canonical": "P40",
+      "display_name": "p40",
+      "aliases": ["P40", "p40", "P 40", "P forty"],
+      "hard_pattern_enforce": true,
+      "allowed_patterns": ["nuclear"],
+      "requirements": {"percent_required": false, "intensity_required": false, "pattern_required": true}
+    },
+    {
+      "marker_canonical": "P63",
+      "display_name": "p63",
+      "aliases": ["P63", "p63", "P 63"],
+      "hard_pattern_enforce": true,
+      "allowed_patterns": ["nuclear"],
+      "requirements": {"percent_required": false, "intensity_required": false, "pattern_required": true}
+    },
+    {
+      "marker_canonical": "CK5_6",
+      "display_name": "CK5/6",
+      "aliases": ["CK5/6", "CK5 6", "CK 5/6"],
+      "hard_pattern_enforce": false,
+      "allowed_patterns": ["cytoplasmic", "membranous"],
+      "requirements": {"percent_required": false, "intensity_required": false, "pattern_required": false}
+    },
+    {
+      "marker_canonical": "CDX2",
+      "display_name": "CDX2",
+      "aliases": ["CDX2", "CDX 2"],
+      "hard_pattern_enforce": true,
+      "allowed_patterns": ["nuclear"],
+      "requirements": {"percent_required": false, "intensity_required": false, "pattern_required": false}
+    },
+    {
+      "marker_canonical": "SATB2",
+      "display_name": "SATB2",
+      "aliases": ["SATB2", "SATB 2"],
+      "hard_pattern_enforce": true,
+      "allowed_patterns": ["nuclear"],
+      "requirements": {"percent_required": false, "intensity_required": false, "pattern_required": false}
+    },
+    {
+      "marker_canonical": "ER",
+      "display_name": "ER",
+      "aliases": ["ER", "Estrogen receptor"],
+      "hard_pattern_enforce": true,
+      "allowed_patterns": ["nuclear"],
+      "requirements": {"percent_required": true, "intensity_required": true, "pattern_required": false}
+    },
+    {
+      "marker_canonical": "PR",
+      "display_name": "PR",
+      "aliases": ["PR", "Progesterone receptor"],
+      "hard_pattern_enforce": true,
+      "allowed_patterns": ["nuclear"],
+      "requirements": {"percent_required": true, "intensity_required": true, "pattern_required": false}
+    },
+    {
+      "marker_canonical": "HER2",
+      "display_name": "HER2",
+      "aliases": ["HER2", "HER-2", "HER 2", "c-erbB2"],
+      "hard_pattern_enforce": true,
+      "allowed_patterns": ["membranous"],
+      "requirements": {"percent_required": false, "intensity_required": true, "pattern_required": true}
+    },
+    {
+      "marker_canonical": "KI67",
+      "display_name": "Ki-67",
+      "aliases": ["KI67", "Ki67", "Ki-67", "Ki 67", "Ki sixty seven", "MIB1"],
+      "hard_pattern_enforce": true,
+      "allowed_patterns": ["nuclear"],
+      "requirements": {"percent_required": true, "intensity_required": false, "pattern_required": false}
+    },
+    {
+      "marker_canonical": "ALK",
+      "display_name": "ALK",
+      "aliases": ["ALK", "D5F3"],
+      "hard_pattern_enforce": false,
+      "allowed_patterns": ["cytoplasmic"],
+      "requirements": {"percent_required": false, "intensity_required": false, "pattern_required": false}
+    }
+  ]
+}

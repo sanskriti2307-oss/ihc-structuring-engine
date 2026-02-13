@@ -1,6 +1,6 @@
 [
   {
-    "output_id": "fdde7099-e194-410a-8a31-52d0465e6713",
+    "output_id": "cdfc9945-cd9a-4006-9bb1-beadcb745196",
     "input_id": "case-01",
     "status": "failed",
     "ihc": {
@@ -90,7 +90,7 @@
     }
   },
   {
-    "output_id": "699b2097-55d1-4a21-b938-c7e9c663d5b4",
+    "output_id": "67a5a44a-c342-4564-8d69-a2e6646c17ee",
     "input_id": "case-02",
     "status": "failed",
     "ihc": {
@@ -122,7 +122,7 @@
     }
   },
   {
-    "output_id": "5b041f35-83b9-4aef-b730-066d5954ae8e",
+    "output_id": "26537097-642b-47a0-8681-221b783afb82",
     "input_id": "case-03",
     "status": "needs_review",
     "ihc": {
@@ -169,8 +169,8 @@
       "errors": [],
       "warnings": [
         {
-          "code": "LOW_CONFIDENCE",
-          "message": "Result inferred from percent for KI67.",
+          "code": "RESULT_INFERRED",
+          "message": "Result inferred from attributes for KI67.",
           "severity": "warning",
           "marker_canonical": "KI67",
           "field": "result"
@@ -191,7 +191,7 @@
     }
   },
   {
-    "output_id": "b2bf1700-bf35-4d18-b966-9b31d39e7340",
+    "output_id": "d77d33de-7335-40fa-a6db-88e65c6bfd64",
     "input_id": "case-04",
     "status": "failed",
     "ihc": {
@@ -261,7 +261,7 @@
     }
   },
   {
-    "output_id": "fd85ae76-1c11-4a75-a848-9ae5404b4acc",
+    "output_id": "360f8b18-e370-4729-b85f-044619d727a6",
     "input_id": "case-05",
     "status": "failed",
     "ihc": {
@@ -359,9 +359,9 @@
     }
   },
   {
-    "output_id": "617aec86-6990-4e0c-8ed2-ef2edf476e1f",
+    "output_id": "668e8aab-6162-4090-911b-df66a99d7472",
     "input_id": "case-06",
-    "status": "ok",
+    "status": "needs_review",
     "ihc": {
       "panel_name": null,
       "case_id": null,
@@ -377,7 +377,7 @@
           "extent": "diffuse",
           "controls": "not mentioned",
           "comment": null,
-          "confidence": "explicit",
+          "confidence": "inferred",
           "evidence": [
             {
               "text_span": "CK7 positive",
@@ -409,7 +409,15 @@
     },
     "validation": {
       "errors": [],
-      "warnings": []
+      "warnings": [
+        {
+          "code": "RESULT_INFERRED",
+          "message": "Result inferred from attributes for CK7.",
+          "severity": "warning",
+          "marker_canonical": "CK7",
+          "field": "result"
+        }
+      ]
     },
     "provenance": {
       "source_type": "text",
@@ -418,7 +426,7 @@
     }
   },
   {
-    "output_id": "2824664c-570a-4783-ae79-23bc942fc6d9",
+    "output_id": "6b341da4-be3a-4e94-88d9-8555eb7f560b",
     "input_id": "case-07",
     "status": "failed",
     "ihc": {
@@ -485,7 +493,7 @@
     }
   },
   {
-    "output_id": "b301d6a5-db10-4ffa-a738-e5604f6dcbee",
+    "output_id": "e8f3c35a-9e7e-4163-896e-31c49f35e851",
     "input_id": "case-08",
     "status": "ok",
     "ihc": {
@@ -539,9 +547,9 @@
     }
   },
   {
-    "output_id": "ffce38f8-8112-4ddc-bada-b68511404da7",
+    "output_id": "b373cfc1-343d-448e-9118-67cd3bfe55fb",
     "input_id": "case-09",
-    "status": "failed",
+    "status": "needs_review",
     "ihc": {
       "panel_name": null,
       "case_id": null,
@@ -550,14 +558,14 @@
         {
           "marker_name": "Napsin A",
           "marker_canonical": "NAPSIN_A",
-          "result": null,
+          "result": "Positive",
           "pattern": null,
           "intensity": null,
           "percent_positive": null,
           "extent": "focal",
           "controls": "not mentioned",
           "comment": null,
-          "confidence": "explicit",
+          "confidence": "inferred",
           "evidence": [
             {
               "text_span": "Napsin A focal",
@@ -569,11 +577,11 @@
       ]
     },
     "rendered": {
-      "narrative": "Immunohistochemistry (Specimen A):\n",
+      "narrative": "Immunohistochemistry (Specimen A):\nNapsin A: Positive.",
       "table": [
         {
           "marker": "Napsin A",
-          "result": "",
+          "result": "Positive",
           "pattern": null,
           "intensity": null,
           "percent_positive": null,
@@ -583,16 +591,16 @@
       ]
     },
     "validation": {
-      "errors": [
+      "errors": [],
+      "warnings": [
         {
-          "code": "RESULT_MISSING",
-          "message": "Missing result for NAPSIN_A.",
-          "severity": "error",
+          "code": "RESULT_INFERRED",
+          "message": "Result inferred from attributes for NAPSIN_A.",
+          "severity": "warning",
           "marker_canonical": "NAPSIN_A",
           "field": "result"
         }
-      ],
-      "warnings": []
+      ]
     },
     "provenance": {
       "source_type": "text",
@@ -601,9 +609,9 @@
     }
   },
   {
-    "output_id": "8b365dea-7f38-46cf-9484-1361946cb091",
+    "output_id": "77820701-3066-47dd-9d62-68035a096b01",
     "input_id": "case-10",
-    "status": "failed",
+    "status": "needs_review",
     "ihc": {
       "panel_name": null,
       "case_id": null,
@@ -612,14 +620,14 @@
         {
           "marker_name": "HER2",
           "marker_canonical": "HER2",
-          "result": null,
+          "result": "Positive",
           "pattern": "membranous",
           "intensity": "strong",
           "percent_positive": null,
           "extent": null,
           "controls": "not mentioned",
           "comment": null,
-          "confidence": "explicit",
+          "confidence": "inferred",
           "evidence": [
             {
               "text_span": "HER2 strong membranous",
@@ -631,11 +639,11 @@
       ]
     },
     "rendered": {
-      "narrative": "Immunohistochemistry (Specimen A):\n",
+      "narrative": "Immunohistochemistry (Specimen A):\nHER2: Positive, membranous, strong.",
       "table": [
         {
           "marker": "HER2",
-          "result": "",
+          "result": "Positive",
           "pattern": "membranous",
           "intensity": "strong",
           "percent_positive": null,
@@ -645,16 +653,16 @@
       ]
     },
     "validation": {
-      "errors": [
+      "errors": [],
+      "warnings": [
         {
-          "code": "RESULT_MISSING",
-          "message": "Missing result for HER2.",
-          "severity": "error",
+          "code": "RESULT_INFERRED",
+          "message": "Result inferred from attributes for HER2.",
+          "severity": "warning",
           "marker_canonical": "HER2",
           "field": "result"
         }
-      ],
-      "warnings": []
+      ]
     },
     "provenance": {
       "source_type": "text",
@@ -663,7 +671,7 @@
     }
   },
   {
-    "output_id": "3933bef8-31f3-4356-ac43-302d410e6603",
+    "output_id": "a542e00e-e617-4883-8ad7-259ef69dc99b",
     "input_id": "case-11",
     "status": "failed",
     "ihc": {
@@ -725,9 +733,9 @@
     }
   },
   {
-    "output_id": "cb6df325-474d-4649-ae87-5716acbc9340",
+    "output_id": "9b0b4b63-3f0c-4990-a2f8-60f85718d209",
     "input_id": "case-12",
-    "status": "failed",
+    "status": "ok",
     "ihc": {
       "panel_name": null,
       "case_id": null,
@@ -739,14 +747,14 @@
           "result": "Positive",
           "pattern": "membranous",
           "intensity": "strong",
-          "percent_positive": 70.0,
+          "percent_positive": null,
           "extent": "diffuse",
           "controls": "not mentioned",
           "comment": null,
           "confidence": "explicit",
           "evidence": [
             {
-              "text_span": "CK7 positive diffuse strong membranous CK20 negative TTF-1 positive nuclear seventy percent p40 negative",
+              "text_span": "CK7 positive diffuse strong membranous",
               "start_char": null,
               "end_char": null
             }
@@ -755,17 +763,17 @@
         {
           "marker_name": "CK20",
           "marker_canonical": "CK20",
-          "result": "Positive",
-          "pattern": "membranous",
-          "intensity": "strong",
-          "percent_positive": 70.0,
-          "extent": "diffuse",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
           "controls": "not mentioned",
           "comment": null,
           "confidence": "explicit",
           "evidence": [
             {
-              "text_span": "CK7 positive diffuse strong membranous CK20 negative TTF-1 positive nuclear seventy percent p40 negative",
+              "text_span": "CK20 negative",
               "start_char": null,
               "end_char": null
             }
@@ -775,16 +783,16 @@
           "marker_name": "TTF-1",
           "marker_canonical": "TTF1",
           "result": "Positive",
-          "pattern": "membranous",
-          "intensity": "strong",
+          "pattern": "nuclear",
+          "intensity": null,
           "percent_positive": 70.0,
-          "extent": "diffuse",
+          "extent": null,
           "controls": "not mentioned",
           "comment": null,
           "confidence": "explicit",
           "evidence": [
             {
-              "text_span": "CK7 positive diffuse strong membranous CK20 negative TTF-1 positive nuclear seventy percent p40 negative",
+              "text_span": "TTF-1 positive nuclear seventy percent",
               "start_char": null,
               "end_char": null
             }
@@ -793,17 +801,17 @@
         {
           "marker_name": "p40",
           "marker_canonical": "P40",
-          "result": "Positive",
-          "pattern": "membranous",
-          "intensity": "strong",
-          "percent_positive": 70.0,
-          "extent": "diffuse",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
           "controls": "not mentioned",
           "comment": null,
           "confidence": "explicit",
           "evidence": [
             {
-              "text_span": "CK7 positive diffuse strong membranous CK20 negative TTF-1 positive nuclear seventy percent p40 negative",
+              "text_span": "p40 negative",
               "start_char": null,
               "end_char": null
             }
@@ -812,63 +820,48 @@
       ]
     },
     "rendered": {
-      "narrative": "Immunohistochemistry (Specimen A):\nCK7: Positive, membranous, strong, in 70% of cells.\nCK20: Positive, membranous, strong, in 70% of cells.\nTTF-1: Positive, membranous, strong, in 70% of cells.\np40: Positive, membranous, strong, in 70% of cells.",
+      "narrative": "Immunohistochemistry (Specimen A):\nCK7: Positive, membranous, strong.\nCK20: Negative.\nTTF-1: Positive, nuclear, in 70% of cells.\np40: Negative.",
       "table": [
         {
           "marker": "CK7",
           "result": "Positive",
           "pattern": "membranous",
           "intensity": "strong",
-          "percent_positive": 70.0,
+          "percent_positive": null,
           "extent": "diffuse",
           "comment": null
         },
         {
           "marker": "CK20",
-          "result": "Positive",
-          "pattern": "membranous",
-          "intensity": "strong",
-          "percent_positive": 70.0,
-          "extent": "diffuse",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
           "comment": null
         },
         {
           "marker": "TTF-1",
           "result": "Positive",
-          "pattern": "membranous",
-          "intensity": "strong",
+          "pattern": "nuclear",
+          "intensity": null,
           "percent_positive": 70.0,
-          "extent": "diffuse",
+          "extent": null,
           "comment": null
         },
         {
           "marker": "p40",
-          "result": "Positive",
-          "pattern": "membranous",
-          "intensity": "strong",
-          "percent_positive": 70.0,
-          "extent": "diffuse",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
           "comment": null
         }
       ]
     },
     "validation": {
-      "errors": [
-        {
-          "code": "INVALID_PATTERN",
-          "message": "Invalid pattern for TTF1: membranous",
-          "severity": "error",
-          "marker_canonical": "TTF1",
-          "field": "pattern"
-        },
-        {
-          "code": "INVALID_PATTERN",
-          "message": "Invalid pattern for P40: membranous",
-          "severity": "error",
-          "marker_canonical": "P40",
-          "field": "pattern"
-        }
-      ],
+      "errors": [],
       "warnings": []
     },
     "provenance": {
@@ -878,7 +871,7 @@
     }
   },
   {
-    "output_id": "05814e36-62e1-4611-a51f-309412b91db1",
+    "output_id": "c7d31d11-7807-45bd-a0e3-6ddb2f314b88",
     "input_id": "case-13",
     "status": "needs_review",
     "ihc": {
@@ -981,8 +974,8 @@
       "errors": [],
       "warnings": [
         {
-          "code": "LOW_CONFIDENCE",
-          "message": "Result inferred from percent for KI67.",
+          "code": "RESULT_INFERRED",
+          "message": "Result inferred from attributes for KI67.",
           "severity": "warning",
           "marker_canonical": "KI67",
           "field": "result"
@@ -996,7 +989,7 @@
     }
   },
   {
-    "output_id": "7883a35a-3d31-48bf-b384-fb9faabc49ac",
+    "output_id": "059b9ba2-1b34-4a5d-be3a-2897c8c7f42a",
     "input_id": "case-14",
     "status": "needs_review",
     "ihc": {
@@ -1093,7 +1086,7 @@
     }
   },
   {
-    "output_id": "81ef39d3-4e63-44dc-b1b3-ec22bacc5a0a",
+    "output_id": "b747563b-c638-4310-b9ce-34ebf7f56e77",
     "input_id": "case-15",
     "status": "ok",
     "ihc": {
@@ -1147,7 +1140,7 @@
     }
   },
   {
-    "output_id": "0e01ed8b-16a9-4f47-ae36-2385c3c29d20",
+    "output_id": "ab1d6ba4-2627-4f45-b1fc-318623062db5",
     "input_id": "case-16",
     "status": "ok",
     "ihc": {
@@ -1168,7 +1161,7 @@
           "confidence": "explicit",
           "evidence": [
             {
-              "text_span": "Negative for CK20, CDX2, SATB2",
+              "text_span": "CK20",
               "start_char": null,
               "end_char": null
             }
@@ -1187,7 +1180,7 @@
           "confidence": "explicit",
           "evidence": [
             {
-              "text_span": "Negative for CK20, CDX2, SATB2",
+              "text_span": "CDX2",
               "start_char": null,
               "end_char": null
             }
@@ -1206,7 +1199,7 @@
           "confidence": "explicit",
           "evidence": [
             {
-              "text_span": "Negative for CK20, CDX2, SATB2",
+              "text_span": "SATB2",
               "start_char": null,
               "end_char": null
             }
@@ -1257,7 +1250,7 @@
     }
   },
   {
-    "output_id": "c260a5ae-3787-4785-a2bd-fc7d69069447",
+    "output_id": "905502da-b9e9-436e-ae01-3da2c60ca909",
     "input_id": "case-17",
     "status": "ok",
     "ihc": {
@@ -1278,7 +1271,7 @@
           "confidence": "explicit",
           "evidence": [
             {
-              "text_span": "CK7 and TTF-1 positive",
+              "text_span": "CK7 and",
               "start_char": null,
               "end_char": null
             }
@@ -1297,7 +1290,7 @@
           "confidence": "explicit",
           "evidence": [
             {
-              "text_span": "CK7 and TTF-1 positive",
+              "text_span": "TTF-1 positive",
               "start_char": null,
               "end_char": null
             }
@@ -1316,7 +1309,7 @@
           "confidence": "explicit",
           "evidence": [
             {
-              "text_span": "CK20 and p40 negative",
+              "text_span": "CK20 and",
               "start_char": null,
               "end_char": null
             }
@@ -1335,7 +1328,7 @@
           "confidence": "explicit",
           "evidence": [
             {
-              "text_span": "CK20 and p40 negative",
+              "text_span": "p40 negative",
               "start_char": null,
               "end_char": null
             }
@@ -1395,7 +1388,7 @@
     }
   },
   {
-    "output_id": "22169b76-d29c-47df-8c71-881b86a90ea5",
+    "output_id": "3027c706-b327-474c-8f29-fc824c4c9a8d",
     "input_id": "case-18",
     "status": "needs_review",
     "ihc": {
@@ -1442,8 +1435,8 @@
       "errors": [],
       "warnings": [
         {
-          "code": "LOW_CONFIDENCE",
-          "message": "Result inferred from percent for KI67.",
+          "code": "RESULT_INFERRED",
+          "message": "Result inferred from attributes for KI67.",
           "severity": "warning",
           "marker_canonical": "KI67",
           "field": "result"
@@ -1478,7 +1471,7 @@
     }
   },
   {
-    "output_id": "09a36579-5764-42d8-a9f4-1d8e4fe84a68",
+    "output_id": "f745a012-0619-4fa9-a3e5-f3aa77ecf9e1",
     "input_id": "case-19",
     "status": "needs_review",
     "ihc": {
@@ -1540,7 +1533,7 @@
     }
   },
   {
-    "output_id": "6764697e-e8ca-4488-bf29-679eb7ac7b9f",
+    "output_id": "df86f0f6-c8b4-4a9d-abdc-92f688b20a97",
     "input_id": "case-20",
     "status": "failed",
     "ihc": {

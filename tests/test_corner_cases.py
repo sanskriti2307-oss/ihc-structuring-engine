@@ -51,3 +51,26 @@ def test_tc_20_no_markers_found(tmp_path: Path):
     case = out[19]  # TC-20
     assert case["status"] == "failed"
     assert "NO_MARKERS_FOUND" in _codes(case, "errors")
+
+
+def test_case_10_her2_inferred_result_needs_review(tmp_path: Path):
+    out = run_batch(Path("corner_cases.txt"), "Specimen A", tmp_path / "o.json")
+    case = out[9]  # case-10
+    assert case["status"] == "needs_review"
+    assert "RESULT_MISSING" not in _codes(case, "errors")
+    assert "RESULT_INFERRED" in _codes(case, "warnings")
+
+
+def test_case_12_run_on_marker_leakage_fixed(tmp_path: Path):
+    out = run_batch(Path("corner_cases.txt"), "Specimen A", tmp_path / "o.json")
+    case = out[11]  # case-12
+    assert case["status"] in {"ok", "needs_review"}
+    invalid_pattern_markers = {e["marker_canonical"] for e in case["validation"]["errors"] if e["code"] == "INVALID_PATTERN"}
+    assert "TTF1" not in invalid_pattern_markers
+    assert "P40" not in invalid_pattern_markers
+
+
+def test_expected_failure_cases_still_failed(tmp_path: Path):
+    out = run_batch(Path("corner_cases.txt"), "Specimen A", tmp_path / "o.json")
+    for idx in [1, 2, 4, 5, 7, 11, 20]:
+        assert out[idx - 1]["status"] == "failed"

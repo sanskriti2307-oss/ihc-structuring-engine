@@ -108,6 +108,24 @@ def _find_markers(text: str, alias_map: dict[str, MarkerDef]) -> list[tuple[Mark
     return dedup
 
 
+
+
+def split_clause_by_markers(clause: str, marker_spans: list[tuple[MarkerDef, tuple[int, int], str]]) -> list[tuple[str, str, str]]:
+    """Split a clause into marker-scoped segments from each marker start to the next marker start."""
+    if not marker_spans:
+        return []
+
+    ordered = sorted(marker_spans, key=lambda x: x[1][0])
+    segments: list[tuple[str, str, str]] = []
+
+    for idx, (md, span, _alias_text) in enumerate(ordered):
+        start = span[0]
+        end = ordered[idx + 1][1][0] if idx + 1 < len(ordered) else len(clause)
+        segment_text = clause[start:end].strip(' ,;')
+        segments.append((md.marker_canonical, md.display_name, segment_text))
+
+    return segments
+
 def _extract_clause_data(clause: str) -> dict[str, Any]:
     lower = clause.lower()
     result = None
@@ -177,28 +195,43 @@ def process_case(case: dict[str, Any], marker_dict_path: str | Path) -> dict[str
         warnings.append({"code": "DIAGNOSTIC_LANGUAGE_DETECTED", "message": "Diagnostic language found in input.", "severity": "warning", "marker_canonical": None, "field": None})
 
     for clause in clauses:
-        clause_data = _extract_clause_data(clause)
         found = _find_markers(clause, alias_map)
+        marker_segments = split_clause_by_markers(clause, found)
 
-        if re.search(r"\bnegative\s+for\b", clause, re.I) and found:
-            clause_data["result"] = "Negative"
+        negative_for_clause = bool(re.search(r"\bnegative\s+for\b", clause, re.I))
+        clause_level_data = _extract_clause_data(clause)
 
-        for md, span, txt in found:
-            ms = markers.get(md.marker_canonical)
+        for marker_canonical, marker_name, segment_text in marker_segments:
+            clause_data = _extract_clause_data(segment_text)
+            if clause_data["result"] is None and clause_level_data["result"] in {"Positive", "Negative", "Not Done"}:
+                clause_data["result"] = clause_level_data["result"]
+            if negative_for_clause and clause_data["result"] is None:
+                clause_data["result"] = "Negative"
+
+            ms = markers.get(marker_canonical)
             if not ms:
-                ms = MarkerState(marker_name=md.display_name, marker_canonical=md.marker_canonical)
-                markers[md.marker_canonical] = ms
+                ms = MarkerState(marker_name=marker_name, marker_canonical=marker_canonical)
+                markers[marker_canonical] = ms
 
             prev_result = ms.result
             inferred_result = clause_data["result"]
-            if inferred_result is None and (clause_data["percent_positive"] is not None or clause_data["percent_approximate"]):
+            has_supporting_attributes = any(
+                [
+                    clause_data["intensity"] is not None,
+                    clause_data["pattern"] is not None,
+                    clause_data["percent_positive"] is not None,
+                    clause_data["percent_approximate"],
+                    clause_data["extent"] is not None,
+                ]
+            )
+            if inferred_result is None and has_supporting_attributes:
                 inferred_result = "Positive"
                 ms.confidence = "inferred"
-                warnings.append({"code": "LOW_CONFIDENCE", "message": f"Result inferred from percent for {md.marker_canonical}.", "severity": "warning", "marker_canonical": md.marker_canonical, "field": "result"})
+                warnings.append({"code": "RESULT_INFERRED", "message": f"Result inferred from attributes for {marker_canonical}.", "severity": "warning", "marker_canonical": marker_canonical, "field": "result"})
 
             if inferred_result is not None:
                 if prev_result and prev_result != inferred_result:
-                    errors.append({"code": "CONTRADICTORY_RESULT", "message": f"Conflicting results for {md.marker_canonical}.", "severity": "error", "marker_canonical": md.marker_canonical, "field": "result"})
+                    errors.append({"code": "CONTRADICTORY_RESULT", "message": f"Conflicting results for {marker_canonical}.", "severity": "error", "marker_canonical": marker_canonical, "field": "result"})
                 ms.result = inferred_result
 
             for fld in ["pattern", "intensity", "extent", "percent_positive"]:
@@ -211,13 +244,13 @@ def process_case(case: dict[str, Any], marker_dict_path: str | Path) -> dict[str
 
             if clause_data["confidence"] != "explicit":
                 ms.confidence = "uncertain"
-                warnings.append({"code": "LOW_CONFIDENCE", "message": f"Uncertain wording for {md.marker_canonical}.", "severity": "warning", "marker_canonical": md.marker_canonical, "field": None})
+                warnings.append({"code": "LOW_CONFIDENCE", "message": f"Uncertain wording for {marker_canonical}.", "severity": "warning", "marker_canonical": marker_canonical, "field": None})
 
             if clause_data["percent_approximate"]:
                 ms.percent_approximate = True
-                warnings.append({"code": "PERCENT_APPROXIMATE", "message": f"Approximate/range percent for {md.marker_canonical}.", "severity": "warning", "marker_canonical": md.marker_canonical, "field": "percent_positive"})
+                warnings.append({"code": "PERCENT_APPROXIMATE", "message": f"Approximate/range percent for {marker_canonical}.", "severity": "warning", "marker_canonical": marker_canonical, "field": "percent_positive"})
 
-            ms.evidence.append({"text_span": clause, "start_char": None, "end_char": None})
+            ms.evidence.append({"text_span": segment_text, "start_char": None, "end_char": None})
 
         # unknown markers (only if shape like "CD positive" and not found known marker)
         if not found:

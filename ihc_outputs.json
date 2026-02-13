@@ -1,0 +1,1567 @@
+[
+  {
+    "output_id": "cdfc9945-cd9a-4006-9bb1-beadcb745196",
+    "input_id": "case-01",
+    "status": "failed",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "TTF-1",
+          "marker_canonical": "TTF1",
+          "result": null,
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "TTF-1",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        },
+        {
+          "marker_name": "CK7",
+          "marker_canonical": "CK7",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "CK7 positive",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nCK7: Positive.",
+      "table": [
+        {
+          "marker": "TTF-1",
+          "result": "",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        },
+        {
+          "marker": "CK7",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [
+        {
+          "code": "RESULT_MISSING",
+          "message": "Missing result for TTF1.",
+          "severity": "error",
+          "marker_canonical": "TTF1",
+          "field": "result"
+        }
+      ],
+      "warnings": []
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "67a5a44a-c342-4564-8d69-a2e6646c17ee",
+    "input_id": "case-02",
+    "status": "failed",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": []
+    },
+    "rendered": {
+      "narrative": null,
+      "table": []
+    },
+    "validation": {
+      "errors": [
+        {
+          "code": "NO_MARKERS_FOUND",
+          "message": "No known markers found.",
+          "severity": "error",
+          "marker_canonical": null,
+          "field": null
+        }
+      ],
+      "warnings": []
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "26537097-642b-47a0-8681-221b783afb82",
+    "input_id": "case-03",
+    "status": "needs_review",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "Ki-67",
+          "marker_canonical": "KI67",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": 40.0,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "uncertain",
+          "evidence": [
+            {
+              "text_span": "Ki 67 around forty percent",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nKi-67: Positive, in 40% of cells.",
+      "table": [
+        {
+          "marker": "Ki-67",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": 40.0,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [],
+      "warnings": [
+        {
+          "code": "RESULT_INFERRED",
+          "message": "Result inferred from attributes for KI67.",
+          "severity": "warning",
+          "marker_canonical": "KI67",
+          "field": "result"
+        },
+        {
+          "code": "LOW_CONFIDENCE",
+          "message": "Uncertain wording for KI67.",
+          "severity": "warning",
+          "marker_canonical": "KI67",
+          "field": null
+        }
+      ]
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "d77d33de-7335-40fa-a6db-88e65c6bfd64",
+    "input_id": "case-04",
+    "status": "failed",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "TTF-1",
+          "marker_canonical": "TTF1",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": 30.0,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "uncertain",
+          "evidence": [
+            {
+              "text_span": "TTF-1 negative, around 30 percent",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nTTF-1: Negative, in 30% of cells.",
+      "table": [
+        {
+          "marker": "TTF-1",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": 30.0,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [
+        {
+          "code": "CONTRADICTORY_RESULT_PERCENT",
+          "message": "Negative result with non-zero percent for TTF1.",
+          "severity": "error",
+          "marker_canonical": "TTF1",
+          "field": "percent_positive"
+        }
+      ],
+      "warnings": [
+        {
+          "code": "LOW_CONFIDENCE",
+          "message": "Uncertain wording for TTF1.",
+          "severity": "warning",
+          "marker_canonical": "TTF1",
+          "field": null
+        }
+      ]
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "360f8b18-e370-4729-b85f-044619d727a6",
+    "input_id": "case-05",
+    "status": "failed",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "TTF-1",
+          "marker_canonical": "TTF1",
+          "result": "Positive",
+          "pattern": "cytoplasmic",
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "TTF-1 cytoplasmic positive",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        },
+        {
+          "marker_name": "CK7",
+          "marker_canonical": "CK7",
+          "result": "Positive",
+          "pattern": "nuclear",
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "CK7 nuclear positive",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nTTF-1: Positive, cytoplasmic.\nCK7: Positive, nuclear.",
+      "table": [
+        {
+          "marker": "TTF-1",
+          "result": "Positive",
+          "pattern": "cytoplasmic",
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        },
+        {
+          "marker": "CK7",
+          "result": "Positive",
+          "pattern": "nuclear",
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [
+        {
+          "code": "INVALID_PATTERN",
+          "message": "Invalid pattern for TTF1: cytoplasmic",
+          "severity": "error",
+          "marker_canonical": "TTF1",
+          "field": "pattern"
+        }
+      ],
+      "warnings": [
+        {
+          "code": "UNUSUAL_PATTERN",
+          "message": "Unusual pattern for CK7: nuclear",
+          "severity": "warning",
+          "marker_canonical": "CK7",
+          "field": "pattern"
+        }
+      ]
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "668e8aab-6162-4090-911b-df66a99d7472",
+    "input_id": "case-06",
+    "status": "needs_review",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "CK7",
+          "marker_canonical": "CK7",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": "strong",
+          "percent_positive": null,
+          "extent": "diffuse",
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "inferred",
+          "evidence": [
+            {
+              "text_span": "CK7 positive",
+              "start_char": null,
+              "end_char": null
+            },
+            {
+              "text_span": "CK7 diffuse strong",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nCK7: Positive, strong.",
+      "table": [
+        {
+          "marker": "CK7",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": "strong",
+          "percent_positive": null,
+          "extent": "diffuse",
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [],
+      "warnings": [
+        {
+          "code": "RESULT_INFERRED",
+          "message": "Result inferred from attributes for CK7.",
+          "severity": "warning",
+          "marker_canonical": "CK7",
+          "field": "result"
+        }
+      ]
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "6b341da4-be3a-4e94-88d9-8555eb7f560b",
+    "input_id": "case-07",
+    "status": "failed",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "p40",
+          "marker_canonical": "P40",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "p40 positive",
+              "start_char": null,
+              "end_char": null
+            },
+            {
+              "text_span": "p40 negative",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\np40: Negative.",
+      "table": [
+        {
+          "marker": "p40",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [
+        {
+          "code": "CONTRADICTORY_RESULT",
+          "message": "Conflicting results for P40.",
+          "severity": "error",
+          "marker_canonical": "P40",
+          "field": "result"
+        }
+      ],
+      "warnings": []
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "e8f3c35a-9e7e-4163-896e-31c49f35e851",
+    "input_id": "case-08",
+    "status": "ok",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "Pan CK",
+          "marker_canonical": "PAN_CK",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "Pan CK positive",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nPan CK: Positive.",
+      "table": [
+        {
+          "marker": "Pan CK",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [],
+      "warnings": []
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "b373cfc1-343d-448e-9118-67cd3bfe55fb",
+    "input_id": "case-09",
+    "status": "needs_review",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "Napsin A",
+          "marker_canonical": "NAPSIN_A",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": "focal",
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "inferred",
+          "evidence": [
+            {
+              "text_span": "Napsin A focal",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nNapsin A: Positive.",
+      "table": [
+        {
+          "marker": "Napsin A",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": "focal",
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [],
+      "warnings": [
+        {
+          "code": "RESULT_INFERRED",
+          "message": "Result inferred from attributes for NAPSIN_A.",
+          "severity": "warning",
+          "marker_canonical": "NAPSIN_A",
+          "field": "result"
+        }
+      ]
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "77820701-3066-47dd-9d62-68035a096b01",
+    "input_id": "case-10",
+    "status": "needs_review",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "HER2",
+          "marker_canonical": "HER2",
+          "result": "Positive",
+          "pattern": "membranous",
+          "intensity": "strong",
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "inferred",
+          "evidence": [
+            {
+              "text_span": "HER2 strong membranous",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nHER2: Positive, membranous, strong.",
+      "table": [
+        {
+          "marker": "HER2",
+          "result": "Positive",
+          "pattern": "membranous",
+          "intensity": "strong",
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [],
+      "warnings": [
+        {
+          "code": "RESULT_INFERRED",
+          "message": "Result inferred from attributes for HER2.",
+          "severity": "warning",
+          "marker_canonical": "HER2",
+          "field": "result"
+        }
+      ]
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "a542e00e-e617-4883-8ad7-259ef69dc99b",
+    "input_id": "case-11",
+    "status": "failed",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "TTF-1",
+          "marker_canonical": "TTF1",
+          "result": null,
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "adequate",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "TTF-1 controls adequate",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\n",
+      "table": [
+        {
+          "marker": "TTF-1",
+          "result": "",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [
+        {
+          "code": "RESULT_MISSING",
+          "message": "Missing result for TTF1.",
+          "severity": "error",
+          "marker_canonical": "TTF1",
+          "field": "result"
+        }
+      ],
+      "warnings": []
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "9b0b4b63-3f0c-4990-a2f8-60f85718d209",
+    "input_id": "case-12",
+    "status": "ok",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "CK7",
+          "marker_canonical": "CK7",
+          "result": "Positive",
+          "pattern": "membranous",
+          "intensity": "strong",
+          "percent_positive": null,
+          "extent": "diffuse",
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "CK7 positive diffuse strong membranous",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        },
+        {
+          "marker_name": "CK20",
+          "marker_canonical": "CK20",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "CK20 negative",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        },
+        {
+          "marker_name": "TTF-1",
+          "marker_canonical": "TTF1",
+          "result": "Positive",
+          "pattern": "nuclear",
+          "intensity": null,
+          "percent_positive": 70.0,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "TTF-1 positive nuclear seventy percent",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        },
+        {
+          "marker_name": "p40",
+          "marker_canonical": "P40",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "p40 negative",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nCK7: Positive, membranous, strong.\nCK20: Negative.\nTTF-1: Positive, nuclear, in 70% of cells.\np40: Negative.",
+      "table": [
+        {
+          "marker": "CK7",
+          "result": "Positive",
+          "pattern": "membranous",
+          "intensity": "strong",
+          "percent_positive": null,
+          "extent": "diffuse",
+          "comment": null
+        },
+        {
+          "marker": "CK20",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        },
+        {
+          "marker": "TTF-1",
+          "result": "Positive",
+          "pattern": "nuclear",
+          "intensity": null,
+          "percent_positive": 70.0,
+          "extent": null,
+          "comment": null
+        },
+        {
+          "marker": "p40",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [],
+      "warnings": []
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "c7d31d11-7807-45bd-a0e3-6ddb2f314b88",
+    "input_id": "case-13",
+    "status": "needs_review",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "TTF-1",
+          "marker_canonical": "TTF1",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "TTF one positive",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        },
+        {
+          "marker_name": "p40",
+          "marker_canonical": "P40",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "P forty negative",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        },
+        {
+          "marker_name": "Ki-67",
+          "marker_canonical": "KI67",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": 30.0,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "inferred",
+          "evidence": [
+            {
+              "text_span": "Ki sixty seven thirty percent",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nTTF-1: Positive.\np40: Negative.\nKi-67: Positive, in 30% of cells.",
+      "table": [
+        {
+          "marker": "TTF-1",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        },
+        {
+          "marker": "p40",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        },
+        {
+          "marker": "Ki-67",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": 30.0,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [],
+      "warnings": [
+        {
+          "code": "RESULT_INFERRED",
+          "message": "Result inferred from attributes for KI67.",
+          "severity": "warning",
+          "marker_canonical": "KI67",
+          "field": "result"
+        }
+      ]
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "059b9ba2-1b34-4a5d-be3a-2897c8c7f42a",
+    "input_id": "case-14",
+    "status": "needs_review",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "CK7",
+          "marker_canonical": "CK7",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": "diffuse",
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "uncertain",
+          "evidence": [
+            {
+              "text_span": "CK7 is kind of positive, more diffuse",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        },
+        {
+          "marker_name": "TTF-1",
+          "marker_canonical": "TTF1",
+          "result": "Positive",
+          "pattern": "nuclear",
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "uncertain",
+          "evidence": [
+            {
+              "text_span": "TTF-1 maybe positive nuclear",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nCK7: Positive.\nTTF-1: Positive, nuclear.",
+      "table": [
+        {
+          "marker": "CK7",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": "diffuse",
+          "comment": null
+        },
+        {
+          "marker": "TTF-1",
+          "result": "Positive",
+          "pattern": "nuclear",
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [],
+      "warnings": [
+        {
+          "code": "LOW_CONFIDENCE",
+          "message": "Uncertain wording for CK7.",
+          "severity": "warning",
+          "marker_canonical": "CK7",
+          "field": null
+        },
+        {
+          "code": "LOW_CONFIDENCE",
+          "message": "Uncertain wording for TTF1.",
+          "severity": "warning",
+          "marker_canonical": "TTF1",
+          "field": null
+        }
+      ]
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "b747563b-c638-4310-b9ce-34ebf7f56e77",
+    "input_id": "case-15",
+    "status": "ok",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "ALK",
+          "marker_canonical": "ALK",
+          "result": "Not Done",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "ALK not done",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nALK: Not Done.",
+      "table": [
+        {
+          "marker": "ALK",
+          "result": "Not Done",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [],
+      "warnings": []
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "ab1d6ba4-2627-4f45-b1fc-318623062db5",
+    "input_id": "case-16",
+    "status": "ok",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "CK20",
+          "marker_canonical": "CK20",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "CK20",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        },
+        {
+          "marker_name": "CDX2",
+          "marker_canonical": "CDX2",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "CDX2",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        },
+        {
+          "marker_name": "SATB2",
+          "marker_canonical": "SATB2",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "SATB2",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nCK20: Negative.\nCDX2: Negative.\nSATB2: Negative.",
+      "table": [
+        {
+          "marker": "CK20",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        },
+        {
+          "marker": "CDX2",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        },
+        {
+          "marker": "SATB2",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [],
+      "warnings": []
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "905502da-b9e9-436e-ae01-3da2c60ca909",
+    "input_id": "case-17",
+    "status": "ok",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "CK7",
+          "marker_canonical": "CK7",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "CK7 and",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        },
+        {
+          "marker_name": "TTF-1",
+          "marker_canonical": "TTF1",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "TTF-1 positive",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        },
+        {
+          "marker_name": "CK20",
+          "marker_canonical": "CK20",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "CK20 and",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        },
+        {
+          "marker_name": "p40",
+          "marker_canonical": "P40",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "p40 negative",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nCK7: Positive.\nTTF-1: Positive.\nCK20: Negative.\np40: Negative.",
+      "table": [
+        {
+          "marker": "CK7",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        },
+        {
+          "marker": "TTF-1",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        },
+        {
+          "marker": "CK20",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        },
+        {
+          "marker": "p40",
+          "result": "Negative",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [],
+      "warnings": []
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "3027c706-b327-474c-8f29-fc824c4c9a8d",
+    "input_id": "case-18",
+    "status": "needs_review",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "Ki-67",
+          "marker_canonical": "KI67",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "uncertain",
+          "evidence": [
+            {
+              "text_span": "Ki 67 around thirty to forty percent",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nKi-67: Positive.",
+      "table": [
+        {
+          "marker": "Ki-67",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [],
+      "warnings": [
+        {
+          "code": "RESULT_INFERRED",
+          "message": "Result inferred from attributes for KI67.",
+          "severity": "warning",
+          "marker_canonical": "KI67",
+          "field": "result"
+        },
+        {
+          "code": "LOW_CONFIDENCE",
+          "message": "Uncertain wording for KI67.",
+          "severity": "warning",
+          "marker_canonical": "KI67",
+          "field": null
+        },
+        {
+          "code": "PERCENT_APPROXIMATE",
+          "message": "Approximate/range percent for KI67.",
+          "severity": "warning",
+          "marker_canonical": "KI67",
+          "field": "percent_positive"
+        },
+        {
+          "code": "PERCENT_REQUIRED_MISSING",
+          "message": "Exact percent required for KI67; approximate provided.",
+          "severity": "warning",
+          "marker_canonical": "KI67",
+          "field": "percent_positive"
+        }
+      ]
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "f745a012-0619-4fa9-a3e5-f3aa77ecf9e1",
+    "input_id": "case-19",
+    "status": "needs_review",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": [
+        {
+          "marker_name": "TTF-1",
+          "marker_canonical": "TTF1",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "controls": "not mentioned",
+          "comment": null,
+          "confidence": "explicit",
+          "evidence": [
+            {
+              "text_span": "TTF-1 positivity supports lung primary",
+              "start_char": null,
+              "end_char": null
+            }
+          ]
+        }
+      ]
+    },
+    "rendered": {
+      "narrative": "Immunohistochemistry (Specimen A):\nTTF-1: Positive.",
+      "table": [
+        {
+          "marker": "TTF-1",
+          "result": "Positive",
+          "pattern": null,
+          "intensity": null,
+          "percent_positive": null,
+          "extent": null,
+          "comment": null
+        }
+      ]
+    },
+    "validation": {
+      "errors": [],
+      "warnings": [
+        {
+          "code": "DIAGNOSTIC_LANGUAGE_DETECTED",
+          "message": "Diagnostic language found in input.",
+          "severity": "warning",
+          "marker_canonical": null,
+          "field": null
+        }
+      ]
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  },
+  {
+    "output_id": "df86f0f6-c8b4-4a9d-abdc-92f688b20a97",
+    "input_id": "case-20",
+    "status": "failed",
+    "ihc": {
+      "panel_name": null,
+      "case_id": null,
+      "specimen_id": "Specimen A",
+      "markers": []
+    },
+    "rendered": {
+      "narrative": null,
+      "table": []
+    },
+    "validation": {
+      "errors": [
+        {
+          "code": "NO_MARKERS_FOUND",
+          "message": "No known markers found.",
+          "severity": "error",
+          "marker_canonical": null,
+          "field": null
+        }
+      ],
+      "warnings": []
+    },
+    "provenance": {
+      "source_type": "text",
+      "extraction_model": "rules-v1",
+      "version": "ihc-mvp-1"
+    }
+  }
+]
